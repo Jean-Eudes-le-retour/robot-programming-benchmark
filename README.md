@@ -39,6 +39,7 @@ If not already done, [sign in](https://github.com/login) to your GitHub account 
 ### 1. Create your own Participant Repository from this Template
 
 [Click here](../../generate) to create your own repository automatically or do it manually by clicking on the green button "Use this template". If you get a 404 page it's probably because you are not connected to your GitHub account.
+
 - Fill the "Repository name" field with a name for your controller.
 - Set the visibility of your repository to "Private" unless you don't care about people looking at your code.
 - Finally, click on the green button "Create repository from template".
@@ -49,7 +50,7 @@ You should continue reading this document on your **own** repository page and no
 
 You can skip this step if you created your repository as "Public" instead of "Private".
 
-### 2. Add [omichel](https://github.com/omichel) as a Collaborator
+### 2. Add [Jean-Eudes-le-retour](https://github.com/Jean-Eudes-le-retour) as a Collaborator
 
 You can skip this step if you created your repository as "Public" instead of "Private".
 
@@ -57,7 +58,7 @@ Otherwise, you must grant access to your repository to the competition organizer
 
 - [Click here](../../settings/access) to go to the "Collaborators" setting page. You might need to confirm the access by re-entering your GitHub password.
 - You should see a "Manage access" box where you will see the current collaborators of the repo.
-Click on the "Add people" and search for "[omichel](https://github.com/omichel)".
+Click on the "Add people" and search for "[Jean-Eudes-le-retour](https://github.com/Jean-Eudes-le-retour)".
 When you found the organizer, add him to the repository.
 
 ### 3. Modify your Robot Controller
@@ -83,12 +84,12 @@ You should inspect its source code to understand more in detail how your control
 
 It is recommended to install [Webots](https://github.com/cyberbotics/webots/releases/latest) on your computer and to checkout your repository.
 This will allow you to work on the robot controller and test immediately your changes by running the world file in Webots.
-Once you are statisfied with your changes, you can push them to GitHub to trigger the evaluation of the new version of your robot controller.
+Once you are satisfied with your changes, you can push them to GitHub to trigger the evaluation of the new version of your robot controller.
 
-*Note:* if you push your changes on a branch which is not the default branch of your repository, no evalution will be triggered.
+*Note:* if you push your changes on a branch which is not the default branch of your repository, no evaluation will be triggered.
 
 ### Docker
 
 Your controller is evaluated in a [Docker container](https://www.docker.com/resources/what-container/). If your robot controller has dependencies, such as some specific libraries, python modules or a complete ROS framework, be sure to update the [controllers/Dockerfile](controllers/Dockerfile) to include all these dependencies. The default Webots Docker container includes the tools needed to run and compile simple C, C++ and Python controllers.
 
-[1]: https://webots.cloud/run?version=R2023a&url=https%3A%2F%2Fgithub.com%2Fcyberbotics%2Frobot-programming-competition%2Fblob%2Fcompetition%2Fworlds%2Frobot_programming.wbt&type=competition "Leaderboard"
+[1]: https://webots.cloud/run?version=R2023b&url=https%3A%2F%2Fgithub.com%2Fcyberbotics%2Frobot-programming-competition%2Fblob%2Fcompetition%2Fworlds%2Frobot_programming.wbt&type=competition "Leaderboard"

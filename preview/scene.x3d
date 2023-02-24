@@ -3,7 +3,7 @@
 <X3D version="3.0" profile="Immersive" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-3.0.xsd">
 <head>
 <meta name="generator" content="Webots" />
-<meta name="version" content="R2023a" />
+<meta name="version" content="R2023b" />
 </head>
 <Scene>
 <WorldInfo id='n2' docUrl='https://cyberbotics.com/doc/reference/worldinfo' title="Robot Programming" info='"Competition objective: " "learn how to program a robot."' basicTimeStep='20' coordinateSystem='ENU'></WorldInfo>
