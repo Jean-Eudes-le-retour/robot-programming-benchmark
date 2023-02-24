@@ -1,7 +1,6 @@
 """Simple robot controller."""
 
 from controller import Robot
-import sys
 
 # Define the target motor position in radians.
 target = 10
