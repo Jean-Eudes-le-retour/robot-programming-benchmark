@@ -1,0 +1,20 @@
+# Triggers a run action on the repository of the organizer when the robot controller get modified on the main branch
+
+name: Trigger Evaluation
+
+on:
+  workflow_dispatch:
+    inputs:
+      participant-repo:
+        type: string
+        required: true
+        description: Repository of the participant
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Free Queue and Possibly Trigger New Workflow
+        if: always()
+        run: |
+          curl -s -X POST -F 'organizer=${{ github.repository }}' -F'participant=${{ github.event.inputs.participant-repo }}' -F'organizer_repo_token=${{ github.token }}' https://benchmark.webots.cloud/run_competition.php
