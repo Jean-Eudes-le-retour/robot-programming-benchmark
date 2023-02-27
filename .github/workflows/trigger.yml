@@ -19,6 +19,10 @@ jobs:
   trigger:
     runs-on: ubuntu-latest
     steps:
-      - name: Send a repository dispatch event
+#      - name: Send a repository dispatch event
+#        run: |
+#          curl -s -X POST -F 'organizer=Jean-Eudes-le-retour/robot-programming-perso' -F'participant=${{ github.event.inputs.participant-repo }}' -F'token=${{ github.token }}' https://benchmark.webots.cloud/run_competition.php
+      - name: Free Queue and Possibly Trigger New Workflow
+        if: always()
         run: |
-          curl -s -X POST -F 'organizer=Jean-Eudes-le-retour/robot-programming-perso' -F'participant=${{ github.event.inputs.participant-repo }}' -F'token=${{ github.token }}' https://webots.cloud/run_competition.php
+          curl -s -X POST -F 'organizer=${{ github.repository }}' -F'participant=${{ github.event.inputs.participant-repo }}' -F'organizer_repo_token=${{ github.token }}' https://benchmark.webots.cloud/run_competition.php
