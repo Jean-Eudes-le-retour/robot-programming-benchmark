@@ -75,4 +75,4 @@ jobs:
       - name: Free Queue and Possibly Trigger New Workflow
         if: always()
         run: |
-          curl -s -X POST -F 'organizer=${{ github.repository }}' -F'participant=${{ github.event.client_payload.repository }}' -F'organizer_repo_token=${{ github.token }}' https://webots.cloud/run_competition.php
+          curl -s -X POST -F 'organizer=${{ github.repository }}' -F'participant=${{ github.event.client_payload.repository }}' -F'organizer_repo_token=${{ github.token }}' https://benchmark.webots.cloud/run_competition.php
