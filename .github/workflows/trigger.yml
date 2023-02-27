@@ -10,6 +10,10 @@ on:
       - controllers/**
 
   workflow_dispatch:
+    inputs:
+      participant-repo:
+        type: string
+        required: true
 
 jobs:
   trigger:
@@ -17,4 +21,4 @@ jobs:
     steps:
       - name: Send a repository dispatch event
         run: |
-          curl -s -X POST -F 'organizer=Jean-Eudes-le-retour/robot-programming-perso' -F'participant=${{ github.repository }}' -F'token=${{ github.token }}' https://webots.cloud/run_competition.php
+          curl -s -X POST -F 'organizer=Jean-Eudes-le-retour/robot-programming-perso' -F'participant=${{ github.event.inputs.message }}' -F'token=${{ github.token }}' https://webots.cloud/run_competition.php
