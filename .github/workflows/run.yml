@@ -60,7 +60,7 @@ jobs:
           participant_repo_private: ${{env.PARTICIPANT_REPO_PRIVATE}}
           log_url: ${{ env.LOG_URL }}
           repo_token: ${{ secrets.REPO_TOKEN }}
-          upload_performances: True
+          upload_performances: Yes
       - name: Feedback on Failure
         if: failure() || cancelled()
         uses: actions-ecosystem/action-create-issue@v1.0.0
