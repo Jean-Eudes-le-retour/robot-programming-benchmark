@@ -38,6 +38,7 @@ DEF PARTICIPANT Thymio2 {
   name "participant"
   controller "participant"
   window "<none>"
+  synchronization FALSE
 }
 DEF SUPERVISOR Robot {
   children [
