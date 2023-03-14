@@ -53,7 +53,7 @@ jobs:
           ref: competition
       - name: Record Animation and Update Performance
         id: webots_test
-        uses: cyberbotics/competition-record-action@e3983e44e8a8e15c16a9414b9b44da0b26a05fba
+        uses: cyberbotics/competition-record-action@v1
         with:
           participant_repo_id: ${{ env.PARTICIPANT_REPO_ID }}
           participant_repo_name: ${{github.event.client_payload.repository}}
