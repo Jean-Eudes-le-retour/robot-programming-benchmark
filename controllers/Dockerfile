@@ -1,4 +1,4 @@
-FROM leoduggan/webots.cloud:develop
+FROM cyberbotics/webots.cloud:R2023b-ubuntu22.04-09.03.2023
 
 ARG WEBOTS_CONTROLLER_URL
 ENV WEBOTS_CONTROLLER_URL=${WEBOTS_CONTROLLER_URL}
